@@ -116,7 +116,7 @@ function sendSingleEmail(e) {
 
     // Send the email
     const dayGreeting = getDayGreeting(new Date().getDay());
-    const subject = `Texas A&M Student interested in IB at ${contact.company}`;
+    const subject = `SCHOOL NAME Student interested in IB at ${contact.company}`;
     const body = buildEmailBody(contact.name, contact.school, contact.company, dayGreeting);
     GmailApp.sendEmail(contact.email, subject, body);
 
@@ -151,7 +151,7 @@ function sendDailyStatusReport() {
     ? "No emails were sent today."
     : `A total of ${sentCount} emails were sent today.`;
 
-  GmailApp.sendEmail("nikhilprabh32@gmail.com", subject, body);
+  GmailApp.sendEmail("EMAIL@gmail.com", subject, body);
 }
 
 // --- HELPERS ---
